@@ -41,6 +41,11 @@ export function Home() {
             return
         }
 
+        if(roomRef.val().endedAt) {
+            window.alert(`Desculpe! Essa sala foi excluida em ${roomRef.val().endedAt}`)
+            return
+        }
+
         history.push(`/rooms/${roomCode}`);
     }
 
